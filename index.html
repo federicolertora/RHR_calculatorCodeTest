@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- A basic arithmatic calculator in HTML and JavaScript -->
+
+<html>
+    
+    <head>
+        <title>Calculator</title>
+        
+        <style>
+            /* calculator container positioning styles */
+            #calculator-container {
+                position: relative;
+                padding: 50px;
+                width: 300px;
+                margin: auto;
+            }
+            
+            /* calculator buttons styles */
+            input[type=button] {
+                background: lightGrey;
+                width: 20%;
+                height: 20%;
+                font-size: 20px;
+                font-weight: 900;
+                margin: 2%;
+                border-radius: 100px;
+            }
+            
+            /* calculation box styles */
+            input[type=text] {
+                position: relative;
+                display: block;
+                padding: 7px;
+                width: 95%;
+                margin: 5px auto;
+                text-align: right;
+                font-size: 20px;
+                border-radius: 100px;
+            }
+            
+        </style>
+    </head>
+    
+    
+    <body style="background-image: url(https://images.unsplash.com/photo-1511377107391-116a9d5d20b5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c36af8fdc0ecb730540a3d1b9fef34f1&auto=format&fit=crop&w=1500&q=80)">
+        <!-- Image attribution: Charles Deluvio at https://unsplash.com/photos/zGn2cg9qBvU -->
+        
+        <!-- Calculator container -->
+        <div id="calculator-container">
+            <form name="calculator">
+                
+                <!-- calculation box set up -->
+                <input type="text" name="calculationBox" />
+                <br/>
+                
+                <!-- calculator button pad set up -->
+                <input type="button" value=" 7 " onclick="calculator.calculationBox.value += '7' "/>
+                <input type="button" value=" 8 " onclick="calculator.calculationBox.value += '8' "/>
+                <input type="button" value=" 9 " onclick="calculator.calculationBox.value += '9' "/>
+                <input type="button" value=" / " onclick="calculator.calculationBox.value += '/' "/>
+                <br/>
+                <input type="button" value=" 4 " onclick="calculator.calculationBox.value += '4' "/>
+                <input type="button" value=" 5 " onclick="calculator.calculationBox.value += '5' "/>
+                <input type="button" value=" 6 " onclick="calculator.calculationBox.value += '6' "/>
+                <input type="button" value=" * " onclick="calculator.calculationBox.value += '*' "/>
+                <br/>
+                <input type="button" value=" 1 " onclick="calculator.calculationBox.value += '1' "/>
+                <input type="button" value=" 2 " onclick="calculator.calculationBox.value += '2' "/>
+                <input type="button" value=" 3 " onclick="calculator.calculationBox.value += '3' "/>
+                <input type="button" value=" - " onclick="calculator.calculationBox.value += '-' "/>
+                <br/>
+                <input type="button" value=" C " onclick="calculator.calculationBox.value = '' "/>
+                <input type="button" value=" 0 " onclick="calculator.calculationBox.value += '0' "/>
+                <input type="button" value=" = " onclick="calculator.calculationBox.value = eval(calculator.calculationBox.value);"/>
+                <input type="button" value=" + " onclick="calculator.calculationBox.value += '+' "/>
+                
+            </form>
+        </div>
+        
+    </body>
+    
+</html>
